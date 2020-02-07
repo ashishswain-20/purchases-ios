@@ -38,17 +38,17 @@ rvm gemset use --create purchases-ios
 echo "Installing dependencies if needed..."
 bundle install
 
-echo "Pushing release to Cocoapods..."
-pod trunk push Purchases.podspec
-
-COCOAPODS_RESULT=$
-
-if [ $COCOAPODS_RESULT == 0 ]; then
-  echo "Successfully pushed $CURRENT_VERSION to Cocoapods!"
-else
-  echo "Error pushing to Cocoapods, aborting"
-  exit $COCOAPODS_RESULT
-fi
+#echo "Pushing release to Cocoapods..."
+#pod trunk push Purchases.podspec
+#
+#COCOAPODS_RESULT=$
+#
+#if [ $COCOAPODS_RESULT == 0 ]; then
+#  echo "Successfully pushed $CURRENT_VERSION to Cocoapods!"
+#else
+#  echo "Error pushing to Cocoapods, aborting"
+#  exit $COCOAPODS_RESULT
+#fi
 
 echo "Preparing Carthage release"
 echo "building..."
